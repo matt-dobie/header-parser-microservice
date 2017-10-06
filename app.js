@@ -20,10 +20,22 @@ app.get('/', function(req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-// Get call to return JSON date
+// Get call to return JSON browser info
 app.get('/whoami', function(req, res) {
-  res.json({Working: "yes"});
-  res.end();
+
+  var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  ip = ip.split(",")[0];
+
+  var language = req.headers['accept-language'].split(",")[0];
+
+  var software = req.headers['user-agent'].split(/[\(\)]/)[1];
+
+  res.json({
+    ip_address: ip,
+    language: language,
+    software: software
+  });
+
 });
 
 // Respond not found to all the wrong routes
