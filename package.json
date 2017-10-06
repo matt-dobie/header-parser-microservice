@@ -1,0 +1,22 @@
+{
+  "name": "header-parser-microservice",
+  "version": "1.0.0",
+  "description": "An API that gets the user's browser information",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matt-dobie/header-parser-microservice.git"
+  },
+  "author": "Matthew Dobie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matt-dobie/header-parser-microservice/issues"
+  },
+  "homepage": "https://github.com/matt-dobie/header-parser-microservice#readme",
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
